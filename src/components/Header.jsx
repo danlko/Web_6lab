@@ -2,27 +2,21 @@ import Navigation from './Navigation';
 
 function Header() {
   return (
-    <header>
-      <nav className="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
-        <div className="container-fluid">
-          <a className="navbar-brand fw-bold" href="#">E-Shop</a>
-          
-          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
+    <header className="border-bottom bg-light">
+      <nav className="navbar navbar-expand-lg navbar-light">
+        <div className="container justify-content-between">
+          <a className="navbar-brand d-flex align-items-center fw-bold" href="#">
+            <img 
+              src="https://www.svgrepo.com/show/21889/trainers.svg" 
+              alt="Logo" 
+              width="40" 
+              height="40" 
+              className="me-2"
+            />
+          </a>
 
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            
-            <Navigation /> {/* Наш компонент з посиланнями */}
-            
-            {/* Іконка кошика (справа) */}
-            <div className="d-flex">
-              <button className="btn btn-outline-dark" type="submit">
-                🛒 Cart
-                <span className="badge bg-dark text-white ms-1 rounded-pill">0</span>
-              </button>
-            </div>
-
+          <div className="d-flex justify-content-center flex-grow-1">
+            <Navigation />
           </div>
         </div>
       </nav>
